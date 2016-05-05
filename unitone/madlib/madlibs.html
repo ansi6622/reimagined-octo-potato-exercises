@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="madlibsapp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="ngapp.js"></script>
+    <script src="service.js"></script>
+    <script src="controller.js"></script>
+  </head>
+  <body>
+<div ng-controller="MadLibsController" class="inputs">
+  <form class="" novalidate>
+
+  <input type="text" ng-model="bitsODataLibs.lover" value="" placeholder="the lover">
+  <input type="text" ng-model="bitsODataLibs.admirer" value="" placeholder="the admirer">
+  <input type="text" ng-model="bitsODataLibs.adjective" value="" placeholder="the adjective">
+
+  <input type="text" ng-model="bitsODataLibs.nouns" value="" placeholder="the noun">
+  <input type="text" ng-model="bitsODataLibs.nouns2" value="" placeholder="the noun2">
+  <input type="text" ng-model="bitsODataLibs.nouns3" value="" placeholder="the noun3">
+  <input type="text" ng-model="bitsODataLibs.nouns4" value="" placeholder="the noun4">
+
+  <input type="text" ng-model="bitsODataLibs.verbs" value="" placeholder="the verbs">
+  <input type="text" ng-model="bitsODataLibs.verb" value="" placeholder="the verb">
+  <input type="text" ng-model="bitsODataLibs.verbing" value="" placeholder="the verbing">
+
+  <input type="button" ng-click="reset()" value="Reset" />
+  <input type="submit" ng-click="createLibs(bitsODataLibs)" value="Master Save">
+</form>
+<pre>object = {{bitsODataLibs | json}}</pre>
+<pre>master = {{master | json}}</pre>
+<hr>
+<div class="container preview">
+  <h3>I'm in love with <span ng-bind="bitsODataLibs.lover"></span>. He's so <span ng-bind="bitsODataLibs.adjective"></span>! He has big flat <span ng-bind="bitsODataLibs.nouns"></span>, and when our <span ng-bind="bitsODataLibs.nouns2"></span> meet, I get <span ng-bind="bitsODataLibs.nouns3"></span> in my stomach. I've fallen for him like a ton of <span ng-bind="bitsODataLibs.nouns4"></span>, and he <span ng-bind="bitsODataLibs.verbs"></span> for me, too. But I think he's got another girlfriend. What should I do?</h3>
+  <h3> <i>Well <span ng-bind="bitsODataLibs.admirer"></span>, I think that you and <span ng-bind="bitsODataLibs.lover"></span> have got some talking and <span ng-bind="bitsODataLibs.verbing"></span> to do. No one can tell you what you want in life and if you need his big flat <span ng-bind="bitsODataLibs.nouns"></span>, then i say you find his supposed girlfriend and you cut off her <span ng-bind="bitsODataLibs.nouns2"></span>. She obviously doesnt <span ng-bind="bitsODataLibs.verb"></span> about his <span ng-bind="bitsODataLibs.nouns3"></span> or <span ng-bind="bitsODataLibs.nouns4"></span> in general. If you <span ng-bind="bitsODataLibs.verbs"></span> him and he <span ng-bind="bitsODataLibs.verb"></span> you there is no reason you two shouldnt be together.</i></h3>
+</div>
+</div>
+<hr>
+<div ng-controller="MadLibsController" class="container master">
+  <h3>I'm in love with <span ng-bind="master.lover"></span>. He's so <span ng-bind="master.adjective"></span>! He has big flat <span ng-bind="master.nouns"></span>, and when our <span ng-bind="master.nouns2"></span> meet, I get <span ng-bind="master.nouns3"></span> in my stomach. I've fallen for him like a ton of <span ng-bind="master.nouns4"></span>, and he <span ng-bind="master.verbs"></span> for me, too. But I think he's got another girlfriend. What should I do?</h3>
+  <h3> <i>Well <span ng-bind="master.admirer"></span>, I think that you and <span ng-bind="master.lover"></span> have got some talking and <span ng-bind="master.verbing"></span> to do. No one can tell you what you want in life and if you need his big flat <span ng-bind="master.nouns"></span>, then i say you find his supposed girlfriend and you cut off her <span ng-bind="master.nouns2"></span>. She obviously doesnt <span ng-bind="master.verb"></span> about his <span ng-bind="master.nouns3"></span> or <span ng-bind="master.nouns4"></span> in general. If you <span ng-bind="master.verbs"></span> him and he <span ng-bind="master.verb"></span> you there is no reason you two shouldnt be together.</i></h3>
+</div>
+  </body>
+</html>
